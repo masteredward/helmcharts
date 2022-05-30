@@ -5,5 +5,7 @@ cloudflare:
   email: my@email.com
   apiToken: myApiToken
 
+# Change to "production" to use the production ACME server instead.
 acme:
   server: staging
+  # server: production
