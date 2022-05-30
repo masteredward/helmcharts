@@ -1,0 +1,9 @@
+name: cloudflare
+namespace: cert-manager
+
+cloudflare:
+  email: my@email.com
+  apiToken: myApiToken
+
+acme:
+  server: staging
