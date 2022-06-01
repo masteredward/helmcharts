@@ -1,0 +1,4 @@
+apiVersion: v2
+name: simple-minio
+description: A Helm chart to deploy a Standalone Minio Server to be used as File Manager and/or generic S3 storage behind a SSL ingress controller.
+version: 0.1.0

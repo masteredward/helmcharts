@@ -1,0 +1,20 @@
+name: simple-minio
+
+image: quay.io/minio/minio
+
+hostdir: /host
+
+credentials:
+  username: root
+  password: password
+
+ports:
+  api: 9000
+  console: 9090
+
+ingress:
+  class: nginx
+  issuer: cloudflare-issuer
+  domain:
+    api: api.minio.domain.com
+    console: console.minio.domain.com

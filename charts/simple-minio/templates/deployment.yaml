@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.name }}
+  labels:
+    app: {{ .Values.name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.name }}
+    spec:
+      containers:
+      - name: {{ .Values.name }}
+        image: {{ .Values.image }}
+        command:
+        - "/bin/sh"
+        - "-ce"
+        - "minio server /data --address :{{ .Values.ports.api }} --console-address :{{ .Values.ports.console }}"
+        envFrom:
+        - secretRef:
+            name: {{ .Values.name }}-creds
+        ports:
+        - name: api
+          containerPort: {{ .Values.ports.api }}
+          protocol: TCP
+        - name: console
+          containerPort: {{ .Values.ports.console }}
+          protocol: TCP
+        volumeMounts:
+        - name: {{ .Values.name }}-data
+          mountPath: /data
+      volumes:
+      - name: {{ .Values.name }}-data
+        hostPath:
+          path: {{ .Values.hostdir }}
+          type: Directory
