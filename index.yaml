@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   cloudflare-issuer:
   - apiVersion: v2
+    created: "2022-06-01T16:51:07.617462225Z"
+    description: A Cloudflare ClusterIssuer chart for issuing certificates using DNS01
+      challenge
+    digest: 435850cc89cc6771593fff93ca4777506eb9faa51fcbdf9d12d918d60d6ca009
+    name: cloudflare-issuer
+    urls:
+    - https://github.com/masteredward/helmcharts/releases/download/cloudflare-issuer-0.1.1/cloudflare-issuer-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     created: "2022-05-30T15:48:44.41464322Z"
     description: A Cloudflare ClusterIssuer chart for issuing certificates using DNS01
       challenge
@@ -10,4 +19,14 @@ entries:
     urls:
     - https://github.com/masteredward/helmcharts/releases/download/cloudflare-issuer-0.1.0/cloudflare-issuer-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-30T15:48:44.41464932Z"
+  simple-minio:
+  - apiVersion: v2
+    created: "2022-06-01T16:51:07.791889716Z"
+    description: A Helm chart to deploy a Standalone Minio Server to be used as File
+      Manager and/or generic S3 storage behind a SSL ingress controller.
+    digest: aed2cfcb17cc59726917c57b62855ec64decaa977bb293a1f21612e6b293a4f6
+    name: simple-minio
+    urls:
+    - https://github.com/masteredward/helmcharts/releases/download/simple-minio-0.1.0/simple-minio-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-06-01T16:51:07.791897115Z"
