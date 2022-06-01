@@ -1,5 +1,4 @@
 name: cloudflare
-namespace: cert-manager
 
 cloudflare:
   email: my@email.com

@@ -1,4 +1,4 @@
 apiVersion: v2
 name: cloudflare-issuer
 description: A Cloudflare ClusterIssuer chart for issuing certificates using DNS01 challenge
-version: 0.1.0
+version: 0.1.1
